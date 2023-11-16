@@ -1,0 +1,1 @@
+this line simple để khởi tạo một giá trị mặc định của input là chính bằng giá trị của state ở hiện tại.

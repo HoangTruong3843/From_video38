@@ -1,0 +1,1 @@
+Biến onChange gán vào để execute cái function handleOnChangeInput(event) ở trên, sau đó name trong "state" sẽ được updated và thay đổi trực tiếp trong render().

@@ -1,0 +1,1 @@
+This line để truyền dữ liệu vào con dùng cấu trúc của file cha (MyComponent)
