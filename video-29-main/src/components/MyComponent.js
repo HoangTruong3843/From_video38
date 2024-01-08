@@ -35,6 +35,14 @@ class MyComponent extends React.Component {
                     // })
         })
     }
+    
+    handleDeleteUser=(userID)=>{
+        let listUserClone = [...this.state.listUsers];
+        listUserClone = listUserClone.filter(item => item.id !== userID);
+        this.setState({
+            listUsers: listUserClone
+        })
+    }
     //for testing purposes
     handleAddNewProvider=(userObject)=>{
         this.setState({
@@ -47,20 +55,24 @@ class MyComponent extends React.Component {
         
         return (
             // thông thường đặt tên biến và giá trị muốn gán giống hệt nhau (listUsers)
-            <div>
-                
-                <AddUserInfor
-                    handleAddNewUser={this.handleAddNewUser}
-                />
-                <br/>
-                {/* <AddProviderInfor
-                    handleAddNewProvider={this.handleAddNewProvider}
-                /> */}
-                <DisplayInfor 
-                    listUsers ={this.state.listUsers}    
-                />
-                
-            </div> 
+            <>
+                <div className='a'>
+                    <AddUserInfor
+                        handleAddNewUser={this.handleAddNewUser}
+                    />
+                    <br/>
+                    {/* <AddProviderInfor
+                        handleAddNewProvider={this.handleAddNewProvider}
+                    /> */}
+                    <DisplayInfor 
+                        listUsers ={this.state.listUsers}
+                        handleDeleteUser={this.handleDeleteUser}   
+                    />
+                </div>
+                <div className='b'>
+
+                </div>
+            </> 
         );  
     }
 }

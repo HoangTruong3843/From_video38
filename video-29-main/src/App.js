@@ -12,7 +12,10 @@ class App extends React.Component{
 
   render(){
     return (
-      <MyComponent></MyComponent>
+      <div className='app-container'> 
+        Hello world! This is React Ultimate course with Eric
+        <MyComponent></MyComponent>
+      </div>
     );
   }
 }
